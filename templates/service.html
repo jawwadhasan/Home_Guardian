@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Character encoding and responsive viewport settings -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Title of the webpage -->
+    <title>Services</title>
+    
+    <!-- Link to external CSS for styling the page -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/service.css') }}">
+</head>
+<body>
+    <!-- Section for displaying the services offered -->
+    <section class="products">
+        <!-- Header for the services section -->
+        <h2>OUR SERVICES</h2>
+        
+        <!-- Container for listing all the services -->
+        <div class="all-products">
+            <!-- Individual product/service -->
+            <div class="product">
+                <!-- Image for the service -->
+                <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Service Image 1">
+                
+                <!-- Information about the service -->
+                <div class="product-info">
+                    <!-- Title of the service -->
+                    <h4 class="product-title">Professional Carpet Cleaning</h4>
+                    <!-- Price of the service -->
+                    <p class="product-price">Rs.499</p>
+                    <!-- Form to book the service -->
+                    <form action="/book_service" method="POST">
+                        <!-- Hidden fields to pass service details -->
+                        <input type="hidden" name="service_name" value="Professional Carpet Cleaning">
+                        <input type="hidden" name="service_price" value="499">
+                        <!-- Submit button to book the service -->
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Repeat similar structure for other services -->
+            <!-- Service 2 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Service Image 2">
+                <div class="product-info">
+                    <h4 class="product-title">Professional Home Cleaning Service</h4>
+                    <p class="product-price">Rs.2499</p>
+                    <form action="/book_service" method="POST">
+                        <input type="hidden" name="service_name" value="Professional Home Cleaning Service">
+                        <input type="hidden" name="service_price" value="2499">
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Service Image 3">
+                <div class="product-info">
+                    <h4 class="product-title">Deep Cleaning Services</h4>
+                    <p class="product-price">Rs.4999</p>
+                    <form action="/book_service" method="POST">
+                        <input type="hidden" name="service_name" value="Deep Cleaning Services">
+                        <input type="hidden" name="service_price" value="4999">
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/image4.jpg') }}" alt="Service Image 4">
+                <div class="product-info">
+                    <h4 class="product-title">Sofa Cleaning and Dry</h4>
+                    <p class="product-price">Rs.299</p>
+                    <form action="/book_service" method="POST">
+                        <input type="hidden" name="service_name" value="Sofa Cleaning and Dry">
+                        <input type="hidden" name="service_price" value="299">
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/image5.jpg') }}" alt="Service Image 5">
+                <div class="product-info">
+                    <h4 class="product-title">Professional Glass Cleaning</h4>
+                    <p class="product-price">Rs.1999</p>
+                    <form action="/book_service" method="POST">
+                        <input type="hidden" name="service_name" value="Professional Glass Cleaning">
+                        <input type="hidden" name="service_price" value="1999">
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/image6.jpg') }}" alt="Service Image 6">
+                <div class="product-info">
+                    <h4 class="product-title">Professional Curtains Cleaning</h4>
+                    <p class="product-price">Rs.999</p>
+                    <form action="/book_service" method="POST">
+                        <input type="hidden" name="service_name" value="Professional Curtains Cleaning">
+                        <input type="hidden" name="service_price" value="999">
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Service 7 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/image7.png') }}" alt="Service Image 7">
+                <div class="product-info">
+                    <h4 class="product-title">Mattress Dry and Cleaning Service</h4>
+                    <p class="product-price">Rs.1499</p>
+                    <form action="/book_service" method="POST">
+                        <input type="hidden" name="service_name" value="Mattress Dry and Cleaning Service">
+                        <input type="hidden" name="service_price" value="1499">
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Service 8 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/image9.png') }}" alt="Service Image 8">
+                <div class="product-info">
+                    <h4 class="product-title">Complete Home Cleaning Package</h4>
+                    <p class="product-price">Rs.3899</p>
+                    <form action="/book_service" method="POST">
+                        <input type="hidden" name="service_name" value="Complete Home Cleaning Package">
+                        <input type="hidden" name="service_price" value="3899">
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Service 9 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='images/image8.jpg') }}" alt="Service Image 9">
+                <div class="product-info">
+                    <h4 class="product-title">Professional Water Tank Cleaning</h4>
+                    <p class="product-price">Rs.1299</p>
+                    <form action="/book_service" method="POST">
+                        <input type="hidden" name="service_name" value="Professional Water Tank Cleaning">
+                        <input type="hidden" name="service_price" value="1299">
+                        <button type="submit" class="product-btn">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Button to navigate back to the homepage -->
+    <a href="/" class="back-now-button">Back Now</a>
+
+    <!-- Internal CSS for additional styling of the button -->
+    <style>
+        /* Styling for the "Back Now" button */
+        .back-now-button {
+            position: fixed; /* Fixes the button to the bottom-right corner */
+            bottom: 10px;
+            right: 10px;
+            background-color: #2d7bac; /* Button background color */
+            color: white; /* Button text color */
+            padding: 10px 20px; /* Button padding */
+            border: none; /* No border for the button */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size for button text */
+            text-align: center; /* Center the text */
+            text-decoration: none; /* Remove underline from text */
+        }
+
+        /* Hover effect for the "Back Now" button */
+        .back-now-button:hover {
+            background-color: #3c5c63; /* Darker background color on hover */
+        }
+    </style>
+    
+</body>
+</html>

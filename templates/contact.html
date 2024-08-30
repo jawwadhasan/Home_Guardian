@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Contact Us - Home Services</title>
+    
+    <!-- Link to external CSS file for styling the page -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+</head>
+<body>
+    <!-- Header section containing the website title and navigation menu -->
+    <header>
+        <h1>Home Services</h1>
+        <nav>
+            <ul>
+                <!-- Navigation links to different pages -->
+                <li><a href="/">Home</a></li>
+                <li><a href="/service">Services</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main content area -->
+    <main>
+        <!-- Contact section for displaying the contact form -->
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Have questions? We're here to help! Reach out to us using the form below.</p>
+
+            <!-- Contact form for users to submit their details and message -->
+            <form action="/submit_contact" method="post" class="contact-form">
+                
+                <!-- Form group for the user's name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <!-- Form group for the user's email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <!-- Form group for the user's phone number (optional) -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                
+                <!-- Form group for the user's message -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                
+                <!-- Submit button to send the form data -->
+                <button type="submit">Send Message</button>
+            </form>
+
+            <!-- Success message displayed after form submission -->
+            {% if success %}
+            <p class="success-message">Your message has been sent successfully!</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <!-- Footer section containing copyright information and contact email -->
+    <footer>
+        <p>&copy; 2024 Home Services. All Rights Reserved.</p>
+        <p>Contact us: <a href="mailto:info@homeservices.com">info@homeservices.com</a></p>
+    </footer>
+
+    <!-- A floating "Back Now" button to quickly return to the homepage -->
+    <a href="/" class="back-now-button">Back Now</a>
+    
+    <!-- Inline CSS for the "Back Now" button and success message -->
+    <style>
+        /* Styling for the "Back Now" button */
+        .back-now-button {
+            position: fixed;  /* Position it at the bottom right of the screen */
+            bottom: 20px;     
+            right: 20px;      
+            background-color: #2d7bac;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            z-index: 1000;    /* Ensure it appears above other content */
+        }
+
+        /* Hover effect for the "Back Now" button */
+        .back-now-button:hover {
+            background-color: #3c5c63;
+        }
+
+        /* Styling for the success message after form submission */
+        .success-message {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</body>
+</html>

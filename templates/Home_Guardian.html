@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Guardian</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="main">
+        <!-- Navigation bar -->
+        <div class="navbar">
+            <div class="icon">
+                <!-- Website logo -->
+                <h2 class="logo">Home Guardian</h2>
+            </div>
+
+            <div class="menu">
+                <!-- Navigation menu -->
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/service">SERVICE</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <!-- Search bar -->
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+        </div> 
+
+        <!-- Main content area -->
+        <div class="content">
+            <h1> BEST <br><span>Best Deep<br> CLEANING SERVICES</span></h1>
+            <p class="par">&nbsp;YOUR ALL-IN-ONE HOME MANAGEMENT SOLUTION.</p>
+
+            <!-- Call to action button -->
+            <button class="cn"><a href="/contact">GET IN TOUCH</a></button>
+
+            <!-- Order form -->
+            <div class="form">
+                <form action="/place_order" method="POST">
+                    <h2>Place Your Order Now!!</h2>
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <input type="email" name="email" placeholder="Enter Email Here" required>
+                    <input type="text" name="area" placeholder="Enter Area Name" required>
+                    <input type="text" name="services" placeholder="Enter Service Name" required>
+                    <button class="btnn" type="submit">ORDER NOW</button>
+                </form>
+                
+                <!-- Social media icons -->
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ionicons script for icons -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
