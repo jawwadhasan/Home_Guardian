@@ -37,5 +37,8 @@
    ```bash
    git clone https://github.com/jawadhassan1112003/Home_Guardian.git
    cd Home_Guardian
+   pip install -r requirements.txt
+   python app.py
+   Open your web browser and go to http://127.0.0.1:5000/ to view the website.
 
 
