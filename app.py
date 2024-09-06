@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
     return render_template('Home_Guardian.html')
 
-# Route to handle order placement
+# Route to handle order placement when user submits the form
 @app.route('/place_order', methods=['POST'])
 def place_order():
     # Get form data from the POST request
@@ -17,13 +17,21 @@ def place_order():
     area = request.form.get('area')
     services = request.form.get('services')
     
-    # Print order details to the console for debugging
+    # Print order details to the console for debugging purposes
     print(f"Name: {name}")
     print(f"Email: {email}")
     print(f"Area: {area}")
     print(f"Services: {services}")
-
-    # Redirect to a thank you page
+    
+    # Save the order details into 'orders.txt' file
+    with open('orders.txt', 'a') as file:
+        file.write(f"Name: {name}\n")
+        file.write(f"Email: {email}\n")
+        file.write(f"Area: {area}\n")
+        file.write(f"Services: {services}\n")
+        file.write("\n")
+    
+    # Redirect to a thank you page after form submission
     return redirect(url_for('thank_you'))
 
 # Route for the thank you page
@@ -31,30 +39,34 @@ def place_order():
 def thank_you():
     return "Thank you for your order! We will contact you soon."
 
-# Route for the services page
+# Route for the services page 
 @app.route('/service')
 def services():
     return render_template('service.html')
 
-# Route to handle booking of services
+# Route to handle booking of services from the services page
 @app.route('/book_service', methods=['POST'])
 def book_service():
-    # Get service details from the POST request
+    # Get service details from the POST request 
     service_name = request.form.get('service_name')
     service_price = request.form.get('service_price')
     
-    # Print booking details to the console for debugging
+    # Print booking details to the console for debugging purposes
     print(f"Service booked: {service_name} at Rs.{service_price}")
     
-    # Return a message confirming the booking
-    return f"Thank you for booking {service_name}! Kindly fill form; from the Home Page! We will contact you soon."
+    # Save the booking details into 'bookings.txt' file
+    with open('bookings.txt', 'a') as file:
+        file.write(f"Service booked: {service_name} at Rs.{service_price}\n")
+    
+    # Return a confirmation message to the user
+    return f"Thank you for booking {service_name}! Kindly fill the form from the Home Page! We will contact you soon."
 
-# Route for the about page
+# Route for the about page 
 @app.route('/about')
 def about():
     return render_template('about.html')
 
-# Route for the contact page
+# Route for the contact page 
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
@@ -68,13 +80,21 @@ def submit_contact():
     phone = request.form.get('phone')  
     message = request.form['message']
     
-    # Print contact details to the console for debugging
+    # Print contact details to the console for debugging purposes
     print(f"Name: {name}")
     print(f"Email: {email}")
     print(f"Phone: {phone}")
     print(f"Message: {message}")
     
-    # Return the contact page with a success message
+    # Save the contact form details into 'contacts.txt' file
+    with open('contacts.txt', 'a') as file:
+         file.write(f"Name: {name}\n")
+         file.write(f"Email: {email}\n")
+         file.write(f"Phone: {phone}\n")
+         file.write(f"Message: {message}\n")
+         file.write("\n")
+    
+    # Return the contact page with a success message after form submission
     return render_template('contact.html', success=True)
 
 # Run the application in debug mode
