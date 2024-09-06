@@ -1,9 +1,11 @@
-*{
+/* Reset margin and padding for all elements */
+* {
     margin: 0;
     padding: 0;
 }
 
-.main{
+/* Main container styling with a background image and color overlay */
+.main {
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgba(0, 0, 0, 0.5)50%), url("/static/images/background.jpeg");
     background-position: center;
@@ -11,49 +13,56 @@
     height: 100vh;
 }
 
-.navbar{
+/* Navbar styling */
+.navbar {
     width: 1200px;
     height: 75px;
     margin: auto;
 }
 
-.icon{
+/* Icon container (for the logo) */
+.icon {
     width: 200px;
     float: left;
     height: 70px;
 }
 
-.logo{
+/* Logo styling */
+.logo {
     color: #007bff;
     font-size: 30px;
     font-family: Arial;
     padding-left: 20px;
     float: left;
     padding-top: 10px;
-    margin-top: 5px
+    margin-top: 5px;
 }
 
-.menu{
+/* Menu container */
+.menu {
     width: 400px;
     float: left;
     height: 70px;
 }
 
-ul{
+/* Unordered list styling for the menu */
+ul {
     float: left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul li{
+/* List items styling for the menu */
+ul li {
     list-style: none;
     margin-left: 62px;
     margin-top: 27px;
     font-size: 14px;
 }
 
-ul li a{
+/* Links styling within the menu */
+ul li a {
     text-decoration: none;
     color: #fff;
     font-family: Arial;
@@ -61,17 +70,20 @@ ul li a{
     transition: 0.4s ease-in-out;
 }
 
-ul li a:hover{
+/* Hover effect for the menu links */
+ul li a:hover {
     color: #353ceb;
 }
 
-.search{
+/* Search bar container */
+.search {
     width: 330px;
     float: left;
     margin-left: 270px;
 }
 
-.srch{
+/* Search input field styling */
+.srch {
     font-family: 'Times New Roman';
     width: 200px;
     height: 40px;
@@ -87,7 +99,8 @@ ul li a:hover{
     border-top-left-radius: 5px;
 }
 
-.btn{
+/* Search button styling */
+.btn {
     width: 100px;
     height: 40px;
     background: #007bff;
@@ -100,19 +113,24 @@ ul li a:hover{
     transition: 0.2s ease;
     cursor: pointer;
 }
-.btn:hover{
+
+/* Hover effect for the search button */
+.btn:hover {
     color: #000;
 }
 
-.btn:focus{
+/* Remove outline on focus for search button */
+.btn:focus {
     outline: none;
 }
 
-.srch:focus{
+/* Remove outline on focus for search input */
+.srch:focus {
     outline: none;
 }
 
-.content{
+/* Main content area styling */
+.content {
     width: 1200px;
     height: auto;
     margin: auto;
@@ -120,7 +138,8 @@ ul li a:hover{
     position: relative;
 }
 
-.content .par{
+/* Paragraph styling within the content */
+.content .par {
     padding-left: 20px;
     padding-bottom: 25px;
     font-family: Arial;
@@ -128,7 +147,8 @@ ul li a:hover{
     line-height: 30px;
 }
 
-.content h1{
+/* Main heading styling within the content */
+.content h1 {
     font-family: 'Times New Roman';
     font-size: 50px;
     padding-left: 20px;
@@ -136,7 +156,8 @@ ul li a:hover{
     letter-spacing: 2px;
 }
 
-.content .cn{
+/* Call to action button styling */
+.content .cn {
     width: 160px;
     height: 45px;
     background: #007bff;
@@ -147,25 +168,28 @@ ul li a:hover{
     border-radius: 10px;
     cursor: pointer;
     transition: .4s ease;
-    
 }
 
-.content .cn a{
+/* Link within the call to action button */
+.content .cn a {
     text-decoration: none;
     color: #fff;
     transition: .3s ease;
 }
 
-.cn:hover{
+/* Hover effect for the call to action button */
+.cn:hover {
     background-color: #104b8f;
 }
 
-.content span{
+/* Styling for highlighted text within the content */
+.content span {
     color:#007bff;
-    font-size: 65px
+    font-size: 65px;
 }
 
-.form{
+/* Order form styling */
+.form {
     width: 250px;
     height: 430px;
     background: linear-gradient(to top, rgba(226, 210, 210, 0.247)50%,rgba(226, 210, 210, 0.247)50%);
@@ -177,7 +201,8 @@ ul li a:hover{
     padding: 25px;
 }
 
-.form h2{
+/* Form heading styling */
+.form h2 {
     width: 220px;
     font-family: sans-serif;
     text-align: center;
@@ -189,7 +214,8 @@ ul li a:hover{
     padding: 8px;
 }
 
-.form input{
+/* Form input fields styling */
+.form input {
     width: 240px;
     height: 35px;
     background: transparent;
@@ -204,16 +230,19 @@ ul li a:hover{
     font-family: sans-serif;
 }
 
-.form input:focus{
+/* Remove outline on focus for input fields */
+.form input:focus {
     outline: none;
 }
 
-::placeholder{
+/* Placeholder text styling */
+::placeholder {
     color: #fff;
     font-family: Arial;
 }
 
-.btnn{
+/* Submit button styling for the order form */
+.btnn {
     width: 240px;
     height: 40px;
     background: #007bffb9;
@@ -225,26 +254,36 @@ ul li a:hover{
     color: #fff;
     transition: 0.4s ease;
 }
-.btnn:hover{
+
+/* Hover effect for the submit button */
+.btnn:hover {
     background:#104b8f;
     color: #007bffb9;
 }
-.btnn a{
+
+/* Link styling within the submit button */
+.btnn a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
 }
-.icons a{
+
+/* Social media icons container */
+.icons a {
     text-decoration: none;
     color: #fff;
 }
-.icons ion-icon{
+
+/* Ionicon styling for social media icons */
+.icons ion-icon {
     color: #fff;
     font-size: 30px;
     padding-left: 14px;
     padding-top: 5px;
     transition: 0.3s ease;
 }
-.icons ion-icon:hover{
+
+/* Hover effect for social media icons */
+.icons ion-icon:hover {
     color: #007bffb9;
 }
